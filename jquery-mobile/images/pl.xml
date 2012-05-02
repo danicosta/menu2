@@ -1,0 +1,18 @@
+<videolist>
+   <title>Vestas</title>
+
+   <key>video1</key>
+
+   <video id="001">
+
+      <title>Vestas video</title>
+
+      <thumb>jquery-mobile/images/vestas.jpg</thumb>
+
+      <url>jquery-mobile/images/2.mp4</url>
+
+      <duration>2:31</duration>
+
+   </video>
+
+</videolist>

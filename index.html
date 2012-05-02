@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=620">
+
+
+<link type="text/css" rel="stylesheet" media="screen" href="jquery.mobile-1.0a3.min.css">
+<script src="jquery-1.5.min.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="jquery.mobile-1.0a3.min.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+ <link rel="stylesheet" href="simpleplayer.css" type="text/css">
+ 
+<script>
+
+document.addEventListener("deviceready", function() {
+	var reproductor = new Media("jquery-mobile/images/beep1.mp3", terminoReproducirse, error);
+	reproductor.play();
+}, false);
+
+function terminoReproducirse() {
+	
+}
+
+function error() {
+	
+}
+
+
+</script>
+ 
+    <script src="jquery.simpleplayer.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var settings = {
+                progressbarWidth: '200px',
+                progressbarHeight: '10px',
+                progressbarColor: '#22ccff',
+                progressbarBGColor: '#eeeeee',
+                defaultVolume: 0.8
+            };
+            $(".player").player(settings);
+        });
+    </script>
+
+
+</head> 
+
+
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Indice</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Imagen</a></li>
+            <li><a href="#page3">Reproductor Sonido</a></li>
+			<li><a href="#page4">Reproductor Video</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h6 style="font-size:10px;"><small>Test App v1.0</small></h6>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Imagen</h1>
+	</div>
+	<div data-role="content">	
+		<center><img src="jquery-mobile/images/img.gif" width="180" height="256"></center>
+	</div>
+	<div data-role="footer">
+		<h6 style="font-size:10px;"><small>Fotografia1</small></h6>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Reproductor Sonido</h1>
+	</div>
+	<div data-role="content">	
+		 
+       <audio class="player" src="jquery-mobile/images/beep1.mp3">  
+          Your browser does not support the <code>audio</code> element.  
+        </audio>
+        
+    
+	</div>
+	<div data-role="footer">
+		<h6 style="font-size:10px;"><small>Beep.mp3</small></h6>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+	
+	<h1>Reproductor de Video</h1>
+	</div>
+	<div style="width=100%;height=auto;" id="mediaplayer" data-role="content">	
+		<script type="text/javascript" src="jwplayer.js"></script>
+		<script type="text/javascript">
+		jwplayer("mediaplayer").setup({
+			flashplayer: "player.swf",
+			file: "jquery-mobile/images/2.mp4",
+			width: 480,
+			image: "jquery-mobile/images/vestas.jpg",
+			
+		});
+	</script>
+	
+	</div>
+	<div data-role="footer">
+		<h6 style="font-size:10px;"><small>Test Video</small></h6>
+	</div>
+</div>
+
+
+
+</body>
+</html>
